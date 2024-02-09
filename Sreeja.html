@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsating Heart</title>
+</head>
+<body>
+    <h1>Click the button babe to see the pulsating heart animation in the console which i made for you</h1>
+    <button onclick="showHeartAnimation()">Show Heart Animation</button>
+
+    <script>
+        function showHeartAnimation() {
+            function printHeart() {
+                var heart = [
+                    "  **    **  ",
+                    "****  ****",
+                    "**********",
+                    "**********",
+                    "**********",
+                    " ********",
+                    "  ******",
+                    "   ****",
+                    "    **"
+                ];
+                for (var i = 0; i < heart.length; i++) {
+                    console.log(heart[i]);
+                }
+            }
+
+            function pulsatingHeart() {
+                for (var j = 0; j < 3; j++) {
+                    printHeart();
+                    setTimeout(clearScreen, 300);
+                    setTimeout(clearScreen, 600);
+                }
+            }
+
+            function clearScreen() {
+                console.clear();
+            }
+
+            function showMessage() {
+                console.log("My Dearest Sreeja,\n");
+                console.log("I wanted to express my love for you with a little code snippet.");
+                console.log("Here's a pulsating heart made just for you:\n");
+                pulsatingHeart();
+                console.log("\nI love you, Sreeja!");
+            }
+
+            // Show the message initially
+            showMessage();
+        }
+    </script>
+</body>
+</html>
